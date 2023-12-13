@@ -53,7 +53,7 @@ Comprova que la funció funciona correctament fent una crida a la funció `getDa
 
 Implementa també la gestió d'errors de manera que si la petició no s'ha pogut realitzar, es mostri un missatge l'error HTTP que s'ha produït.
 
-### Ex1.2 Preus dels lloguers (2p)
+### Ex1.2 Preus dels lloguers (1p)
 
 Anem a recuperar i mostrar les dades dels preus dels lloguers a Espanya i a Catalunya. Filtra la informació de la taula "Índice de Precios de Alquiler de Vivienda" per a obtenir finalment les dades de la taula **Índices nacionales y por comunidades autónomas: general y por tamaño de la vivienda**.
 
@@ -81,14 +81,14 @@ const main = async () => {
 main();
 ```
 
-Com veus ja tens una certa estructura a l'HTML que hauries de respectar de manera que la informació acabi mostrada en forma de llista no ordenada (ul) dins de cada div corresponent. Pots veure un exemple de com hauria de quedar a la imatge:
+Com veus ja tens una certa estructura a l'HTML que hauries de respectar de manera que la informació acabi mostrada en forma de llista no ordenada `ul` dins de cada `div` corresponent. Pots veure un exemple de com hauria de quedar a la imatge:
 
 ![Preu del LLoguer](./assets/ex1_3.webp )
 
 
-### Ex1.4 Mostrar les dades en forma de gràfic (4p)
+### Ex1.4 Mostrar les dades en forma de gràfic (3p)
 
-Anem a mostrar un altre paràmetre prou interessant. L'IPC és l'índex de preus de consum, un índicador sobre com evolucionen els preus dels productes i serveis que consumeixen les famílies. Aquest índex es calcula a partir d'una cistella de productes i serveis que es consideren representatius dels consums de les famílies. En aquest cas et facilito la URL per a obtenir les dades de l'IPC a nivell estatal dels últims 10 períodes:
+Anem a mostrar un altre paràmetre prou interessant, **l'IPC**. Aquest és l'índex de preus de consum, un índicador sobre com evolucionen els preus dels productes i serveis que consumeixen les famílies. Aquest índex es calcula a partir d'una cistella de productes i serveis que es consideren representatius dels consums de les famílies. En aquest cas et facilito la URL per a obtenir les dades de l'IPC a nivell estatal dels últims 10 períodes:
 
 > https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50934?nult=10
 

@@ -1,6 +1,6 @@
-## EX2 - Verificador (Asincronia amb JS) - 1p Extra
+## EX2 - Verificador (Asincronia amb JS) - 2p
 
-> NOTA: Aquest exercici és el mateix que vaig proposar a l'anterior CheckPoint.  Es valorarà amb **1p extra** si és realitza correctament. Si ja el vas fer, no cal que el tornis a fer.
+> NOTA: Aquest exercici és el mateix que vaig proposar a l'anterior CheckPoint.  Es valorarà amb **2p** si és realitza correctament.
 
 1. Crea una funció _verificarCredencials_ que accepti accepti dos paràmetres: **nomUsuari** i **contrasenya**. Aquesta funció haurà de retornar una promesa.
 
