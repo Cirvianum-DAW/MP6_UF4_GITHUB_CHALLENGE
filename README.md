@@ -1,4 +1,4 @@
-# CheckPoint 2 - MP6 - Avaluació UF1, UF2 i UF4
+# CheckPoint 3 - MP6 - Avaluació UF3, UF4
 
 ## Abans de començar
 
@@ -11,7 +11,7 @@
 
 Dins la carpeta `src` trobaràs els fitxers corresponents a cada exercici i els seus enunciats al fitxer `.md` corresponent.
 
-Els exercicis hauran de passar els tests que trobaràs a la carpeta `__tests__` i que pots executar amb la comanda `npm run test` o des del propi arxiu de test amb les extensions habilitades.
+Si s'escau i n'hi han, els exercicis hauran de passar els tests que trobaràs a la carpeta `__tests__` i que pots executar amb la comanda `npm run test` o des del propi arxiu de test amb les extensions habilitades.
 
 Es valorarà:
 
