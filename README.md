@@ -25,6 +25,6 @@ Us recordem que l'assignatura s'avalua en un 60% per la nota dels checkpoints (e
 
 La nota dels checkpoints es reparteix de la següent manera:
 
-- **UF1: 50% restant de la UF (Tanquem nota d'UF1 amb aquest checkpoint)**
-- **UF2: 50% de la UF - (Pendent un 25% pel proper CP)**
-- **UF4: 25% de la UF - (Quedarà un 50% pel proper CP)**
+- **UF2: 25% restant de la UF (Tanquem nota d'UF2 amb aquest checkpoint)**
+- **UF3: 100% de la UF**
+- **UF4: 100% de la UF**
