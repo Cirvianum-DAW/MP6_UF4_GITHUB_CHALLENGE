@@ -20,7 +20,9 @@ async function fetchUser(username) {
 // Function to fetch repositories for a user
 async function fetchUserRepositories(username) {
   try {
-    const response = await octokit.request(`GET /users/${username}/repos`);
+    const response = await octokit.request(
+      `GET /users/${username}/repos?sort=created`
+    );
     return response.data;
   } catch (error) {
     throw new Error(`Error fetching user repositories: ${error.message}`);
@@ -52,19 +54,12 @@ async function userInfo(username) {
 // Main function to fetch and display repository information
 async function repos(username) {
   try {
-    // Fetch user information
-    const user = await fetchUser(username);
-
-    // Display user information
-    const userInfo = document.querySelector('.userInfo');
-    userInfo.textContent = user.name;
-
     const repositories = await fetchUserRepositories(username);
-
     console.log(repositories);
 
     // Get the GitHub data container
-    const githubDataContainer = document.getElementById('github-data');
+    const githubDataContainer = document.querySelector('.repo-list');
+    console.log(githubDataContainer);
 
     // Clear the container
     githubDataContainer.innerHTML = '';
@@ -84,7 +79,26 @@ async function repos(username) {
       repoDescription.textContent = repo.description;
       repoElement.appendChild(repoDescription);
 
-      // Add more details as needed...
+      const repoLink = document.createElement('a');
+      repoLink.className = 'text-blue-600';
+      repoLink.href = repo.html_url;
+      repoLink.textContent = 'View on GitHub';
+      repoElement.appendChild(repoLink);
+
+      const repoLanguage = document.createElement('p');
+      repoLanguage.className = 'text-gray-700';
+      repoLanguage.textContent = 'Language: ' + repo.language;
+      repoElement.appendChild(repoLanguage);
+
+      const repoStars = document.createElement('p');
+      repoStars.className = 'text-gray-700';
+      repoStars.textContent = 'Stars: ' + repo.stargazers_count;
+      repoElement.appendChild(repoStars);
+
+      const repoForks = document.createElement('p');
+      repoForks.className = 'text-gray-700';
+      repoForks.textContent = 'Forks: ' + repo.forks;
+      repoElement.appendChild(repoForks);
 
       githubDataContainer.appendChild(repoElement);
     });
@@ -93,10 +107,38 @@ async function repos(username) {
   }
 }
 
+async function newRepo() {
+  try {
+    const response = await octokit.request('POST /user/repos', {
+      name: 'new-repo-prova',
+      description: 'This is your first repository created by an API call',
+      private: false,
+    });
+    console.log(response.data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+async function deleteRepo() {
+  try {
+    const response = await octokit.request(
+      'DELETE /repos/prosfp/new-repo-prova'
+    );
+    console.log(response.status);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
 // Call the main function with a username
 function main() {
   userInfo('prosfp');
-  respos('prosfp');
+  repos('prosfp');
 }
+
+// make functions available to the browser
+window.newRepo = newRepo;
+window.deleteRepo = deleteRepo;
 
 main();
