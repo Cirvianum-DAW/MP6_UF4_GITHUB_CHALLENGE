@@ -2,7 +2,7 @@
 import { Octokit } from 'https://cdn.skypack.dev/@octokit/core';
 
 // Define your personal access token
-const TOKEN = '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';
+const TOKEN = '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';
 
 // Create an instance of Octokit with your access token
 const octokit = new Octokit({ auth: TOKEN });
